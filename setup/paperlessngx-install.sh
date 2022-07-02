@@ -85,9 +85,9 @@ EOF
 sh <(curl -sSL https://get.docker.com) &>/dev/null
 msg_ok "Installed Docker $DOCKER_LATEST_VERSION"
 
-msg_info "Installing Paperless $CORE_LATEST_VERSION"
-bash -c "$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
-msg_ok "Installed Home Assistant $CORE_LATEST_VERSION"
+msg_info "Installing Paperless"
+bash -c "$(curl -L http://192.168.1.172:8000/paperless.sh)"
+msg_ok "Installed Home Assistant"
 
 msg_info "Cleaning up"
 apt-get autoremove >/dev/null
